@@ -17,7 +17,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <ClerkProvider appearance={{ baseTheme: dark }}>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+        layout: {
+          logoPlacement: "none",
+        },
+      }}
+    >
       <html lang="en">
         <body className={inter.className}>
           <ThemeProvider
