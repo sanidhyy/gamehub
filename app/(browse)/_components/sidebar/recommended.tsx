@@ -15,7 +15,7 @@ export const Recommended = ({ data }: RecommendedProps) => {
   const showLabel = !collapsed && data.length > 0;
 
   return (
-    <div className="">
+    <div>
       {showLabel && (
         <div className="pl-6 mb-4">
           <p className="text-sm text-muted-foreground">Recommended</p>
@@ -39,7 +39,9 @@ export const Recommended = ({ data }: RecommendedProps) => {
 export const RecommendedSkeleton = () => {
   return (
     <ul className="px-2">
-      {...Array(3).map((_, i) => <UserItemSkeleton key={i} />)}
+      {[...Array(3)].map((_, i) => (
+        <UserItemSkeleton key={i} />
+      ))}
     </ul>
   );
 };
