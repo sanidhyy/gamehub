@@ -1,9 +1,10 @@
 "use client";
 
+import { useState } from "react";
+import { CheckCheck, Copy } from "lucide-react";
+
 import { Hint } from "@/components/hint";
 import { Button } from "@/components/ui/button";
-import { CheckCheck, Copy } from "lucide-react";
-import { useState } from "react";
 
 type CopyButtonProps = {
   value?: string;
