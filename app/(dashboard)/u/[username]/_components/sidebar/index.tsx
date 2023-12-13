@@ -1,3 +1,12 @@
+import { Navigation } from "./navigation";
+import { Toggle } from "./toggle";
+import { Wrapper } from "./wrapper";
+
 export const Sidebar = () => {
-  return <div className="">Sidebar</div>;
+  return (
+    <Wrapper>
+      <Toggle />
+      <Navigation />
+    </Wrapper>
+  );
 };
