@@ -38,6 +38,7 @@ export const ToggleCard = ({
           <Switch
             onCheckedChange={onChange}
             disabled={isPending}
+            aria-disabled={isPending}
             checked={value}
           >
             {value ? "On" : "Off"}
