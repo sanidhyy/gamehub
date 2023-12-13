@@ -3,6 +3,7 @@ import type { PropsWithChildren } from "react";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import { Toaster } from "sonner";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -32,6 +33,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
             forcedTheme="dark"
             storageKey="gamehub-key"
           >
+            <aside>
+              <Toaster theme="light" position="bottom-center" />
+            </aside>
             {children}
           </ThemeProvider>
         </body>

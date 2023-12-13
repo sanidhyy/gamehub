@@ -21,7 +21,7 @@ export const isFollowingUser = async (id: string) => {
     });
 
     return !!existingFollow;
-  } catch (error) {
+  } catch (error: unknown) {
     return false;
   }
 };
