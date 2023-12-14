@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Pencil } from "lucide-react";
 
+import { InfoModal } from "@/components/stream-player/info-modal";
 import { Separator } from "@/components/ui/separator";
 
 type InfoCardProps = {
@@ -40,7 +41,10 @@ export const InfoCard = ({
             </p>
           </div>
 
-          {/* TODO: Add a modal button */}
+          <InfoModal
+            initialName={streamName}
+            initialThumbnailUrl={thumbnailUrl}
+          />
         </div>
 
         <Separator />
