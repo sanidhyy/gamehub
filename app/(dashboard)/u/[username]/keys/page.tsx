@@ -1,7 +1,7 @@
+import { ConnectModal } from "./_components/connect-modal";
 import { UrlCard } from "./_components/url-card";
 import { KeyCard } from "./_components/key-card";
 
-import { Button } from "@/components/ui/button";
 import { getSelf } from "@/lib/auth-service";
 import { getStreamByUserId } from "@/lib/stream-service";
 
@@ -16,7 +16,7 @@ const KeysPage = async () => {
       <div className="flex items-center justify-between mb-4">
         <h1>Keys &amp; URLs</h1>
 
-        <Button variant="primary">Generate</Button>
+        <ConnectModal />
       </div>
 
       <div className="space-y-4">
