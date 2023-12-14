@@ -9,9 +9,10 @@ import {
 import { ConnectionState } from "livekit-client";
 import { useMediaQuery } from "usehooks-ts";
 
-import { useChatSidebar } from "@/store/use-chat-sidebar";
+import { ChatVariant, useChatSidebar } from "@/store/use-chat-sidebar";
 
 import { ChatHeader } from "./chat-header";
+import { ChatForm } from "./chat-form";
 
 type ChatProps = {
   hostName: string;
@@ -63,6 +64,25 @@ export const Chat = ({
   return (
     <div className="flex flex-col bg-background border-l border-b pt-0 h-[calc(100vh-80px)]">
       <ChatHeader />
+      {variant === ChatVariant.CHAT && (
+        <>
+          <ChatForm
+            onSubmit={onSubmit}
+            value={value}
+            onChange={onChange}
+            isHidden={isHidden}
+            isFollowersOnly={isChatFollowersOnly}
+            isDelayed={isChatDelayed}
+            isFollowing={isFollowing}
+          />
+        </>
+      )}
+
+      {variant === ChatVariant.COMMUNITY && (
+        <>
+          <p>Community</p>
+        </>
+      )}
     </div>
   );
 };
