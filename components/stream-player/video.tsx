@@ -9,6 +9,7 @@ import {
 
 import { OfflineVideo } from "./offline-video";
 import { LoadingVideo } from "./loading-video";
+import { LiveVideo } from "./live-video";
 
 type VideoProps = {
   hostName: string;
@@ -29,7 +30,7 @@ export const Video = ({ hostName, hostIdentity }: VideoProps) => {
     content = <OfflineVideo username={hostName} />;
   else if (!participant || tracks.length === 0)
     content = <LoadingVideo label={connectionState} />;
-  else content = <p>Live video</p>;
+  else content = <LiveVideo participant={participant} />;
 
   return <div className="aspect-video border-b group relative">{content}</div>;
 };
