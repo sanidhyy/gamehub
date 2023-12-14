@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { Header, HeaderSkeleton } from "./header";
 import { Chat, ChatSkeleton } from "./chat";
 import { ChatToggle } from "./chat-toggle";
+import { InfoCard } from "./info-card";
 
 type StreamPlayerProps = {
   user: User & {
@@ -56,6 +57,13 @@ export const StreamPlayer = ({
             imageUrl={user.imageUrl}
             isFollowing={isFollowing}
             name={stream.name}
+          />
+
+          <InfoCard
+            hostIdentity={user.id}
+            viewerIdentity={identity}
+            streamName={stream.name}
+            thumbnailUrl={stream.thumnmailUrl}
           />
         </div>
 
