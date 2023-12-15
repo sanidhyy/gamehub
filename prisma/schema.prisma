@@ -60,7 +60,7 @@ model Block {
 model Stream {
   id String @id @default(uuid())
   name String @db.Text
-  thumnmailUrl String? @db.Text
+  thumbnailUrl String? @db.Text
 
   ingressId String? @unique
   serverUrl String? @db.Text
