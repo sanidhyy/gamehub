@@ -7,7 +7,12 @@ import { LiveBadge } from "@/components/live-badge";
 import { UserAvatar, UserAvatarSkeleton } from "@/components/user-avatar";
 
 type ResultCardProps = {
-  data: Stream & { user: User };
+  data: {
+    user: User;
+    isLive: boolean;
+    name: string;
+    thumbnailUrl: string | null;
+  };
 };
 
 export const ResultCard = ({ data }: ResultCardProps) => {
