@@ -21,17 +21,17 @@ export const Actions = async () => {
       <Link
         href="https://github.com/sanidhyy/gamehub"
         className={cn(
-          "text-muted-foreground hover:text-primary",
           buttonVariants({
             size: "sm",
             variant: "ghost",
-          })
+          }),
+          "text-muted-foreground hover:text-primary hidden lg:inline-flex"
         )}
         target="_blank"
         rel="noreferrer noopener"
       >
         <Github className="h-5 w-5 lg:mr-2" />
-        <span className="hidden lg:block">GitHub</span>
+        <span>GitHub</span>
       </Link>
 
       {!!user && (
