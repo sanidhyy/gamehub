@@ -1,13 +1,20 @@
 import Link from "next/link";
+import type { User } from "@prisma/client";
 import { formatDistanceToNow } from "date-fns";
-import type { Stream, User } from "@prisma/client";
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { VerifiedMark } from "@/components/verified-mark";
 import { Thumbnail, ThumbnailSkeleton } from "@/components/thumbnail";
 
 type ResultCardProps = {
-  data: Stream & { user: User };
+  data: {
+    id: string;
+    name: string;
+    thumbnailUrl: string | null;
+    isLive: boolean;
+    updatedAt: Date;
+    user: User;
+  };
 };
 
 export const ResultCard = ({ data }: ResultCardProps) => {
