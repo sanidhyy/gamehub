@@ -22,7 +22,7 @@ const UserPage = async ({ params }: UserPageProps) => {
   if (isBlocked) notFound();
 
   return (
-    <div className="">
+    <div>
       <StreamPlayer
         user={user}
         stream={user.stream}
