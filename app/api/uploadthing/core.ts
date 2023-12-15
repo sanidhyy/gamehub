@@ -18,7 +18,7 @@ export const ourFileRouter = {
           userId: metadata.user.id,
         },
         data: {
-          thumnmailUrl: file.url,
+          thumbnailUrl: file.url,
         },
       });
 

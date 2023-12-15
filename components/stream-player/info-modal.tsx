@@ -51,6 +51,18 @@ export const InfoModal = ({
     setName(e.target.value);
   };
 
+  const onRemove = () => {
+    startTransition(() => {
+      updateStream({ thumbnailUrl: null })
+        .then(() => toast.success("Thumbnail removed."))
+        .catch(() => toast.error("Something went wrong."))
+        .finally(() => {
+          closeRef?.current?.click();
+          setThumbnailUrl(null);
+        });
+    });
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -88,7 +100,7 @@ export const InfoModal = ({
                       type="button"
                       disabled={isPending}
                       aria-disabled={isPending}
-                      onClick={() => {}}
+                      onClick={onRemove}
                       className="h-auto w-auto p-1.5"
                     >
                       <Trash className="h-4 w-4" />
@@ -118,6 +130,7 @@ export const InfoModal = ({
                   onClientUploadComplete={(res) => {
                     setThumbnailUrl(res?.[0]?.url);
                     router.refresh();
+                    closeRef?.current?.click();
                   }}
                 />
               </div>

@@ -18,6 +18,7 @@ export const updateStream = async (values: Partial<Stream>) => {
     if (!selfStream) throw new Error("Stream not found.");
 
     const validData = {
+      thumbnailUrl: values.thumbnailUrl,
       name: values.name,
       isChatEnabled: values.isChatEnabled,
       isChatFollowersOnly: values.isChatFollowersOnly,
@@ -39,6 +40,7 @@ export const updateStream = async (values: Partial<Stream>) => {
 
     return stream;
   } catch (error: unknown) {
+    console.error(error);
     throw new Error("Internal Server Error");
   }
 };

@@ -63,7 +63,7 @@ export const StreamPlayer = ({
             hostIdentity={user.id}
             viewerIdentity={identity}
             streamName={stream.name}
-            thumbnailUrl={stream.thumnmailUrl}
+            thumbnailUrl={stream.thumbnailUrl}
           />
         </div>
 
