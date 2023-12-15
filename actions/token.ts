@@ -35,7 +35,7 @@ export const createViewerToken = async (hostIdentity: string) => {
     {
       identity: isHost ? `host-${self.id}` : self.id,
       name: self.username,
-    }
+    },
   );
 
   token.addGrant({

@@ -38,7 +38,7 @@ export const UserAvatar = ({
       <Avatar
         className={cn(
           isLive && "ring-2 ring-rose-500 border border-background",
-          avatarSizes({ size })
+          avatarSizes({ size }),
         )}
       >
         <AvatarImage src={imageUrl} className="object-cover" />

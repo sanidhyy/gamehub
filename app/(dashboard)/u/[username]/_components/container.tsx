@@ -8,7 +8,7 @@ import { useCreatorSidebar } from "@/store/use-creator-sidebar";
 
 export const Container = ({ children }: PropsWithChildren) => {
   const { collapsed, onCollapse, onExpand } = useCreatorSidebar(
-    (state) => state
+    (state) => state,
   );
 
   const matches = useMediaQuery("(max-width: 1024px)");

@@ -28,15 +28,18 @@ export const ChatCommunity = ({
   };
 
   const filteredParticipants = useMemo(() => {
-    const deduped = participants.reduce((acc, participant) => {
-      const hostAsViewer = `host-${participant.identity}`;
+    const deduped = participants.reduce(
+      (acc, participant) => {
+        const hostAsViewer = `host-${participant.identity}`;
 
-      if (!acc.some((p) => p.identity === hostAsViewer)) {
-        acc.push(participant);
-      }
+        if (!acc.some((p) => p.identity === hostAsViewer)) {
+          acc.push(participant);
+        }
 
-      return acc;
-    }, [] as (RemoteParticipant | LocalParticipant)[]);
+        return acc;
+      },
+      [] as (RemoteParticipant | LocalParticipant)[],
+    );
 
     return deduped.filter((participant) => {
       return participant.name

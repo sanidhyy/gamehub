@@ -17,7 +17,7 @@ export const ChatToggle = () => {
   };
 
   const label = collapsed ? "Expand" : "Collapse";
-  
+
   return (
     <Hint label={label} side="left" asChild>
       <Button

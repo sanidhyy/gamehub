@@ -25,7 +25,7 @@ export const Actions = async () => {
             size: "sm",
             variant: "ghost",
           }),
-          "text-muted-foreground hover:text-primary hidden lg:inline-flex"
+          "text-muted-foreground hover:text-primary hidden lg:inline-flex",
         )}
         target="_blank"
         rel="noreferrer noopener"
@@ -43,7 +43,7 @@ export const Actions = async () => {
               buttonVariants({
                 size: "sm",
                 variant: "ghost",
-              })
+              }),
             )}
           >
             <Clapperboard className="h-5 w-5 lg:mr-2" />

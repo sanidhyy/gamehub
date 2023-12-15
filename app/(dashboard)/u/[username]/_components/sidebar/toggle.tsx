@@ -8,7 +8,7 @@ import { Hint } from "@/components/hint";
 
 export const Toggle = () => {
   const { collapsed, onExpand, onCollapse } = useCreatorSidebar(
-    (state) => state
+    (state) => state,
   );
   const label = collapsed ? "Expand" : "Collapse";
 

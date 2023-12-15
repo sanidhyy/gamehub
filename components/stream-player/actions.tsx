@@ -30,7 +30,7 @@ export const Actions = ({
     startTransition(() => {
       onFollow(hostIdentity)
         .then((data) =>
-          toast.success(`You are now following ${data.following.username}.`)
+          toast.success(`You are now following ${data.following.username}.`),
         )
         .catch(() => toast.error("Something went wrong."));
     });
@@ -40,7 +40,7 @@ export const Actions = ({
     startTransition(() => {
       onUnfollow(hostIdentity)
         .then((data) =>
-          toast.success(`You have unfollowed ${data.following.username}.`)
+          toast.success(`You have unfollowed ${data.following.username}.`),
         )
         .catch(() => toast.error("Something went wrong."));
     });

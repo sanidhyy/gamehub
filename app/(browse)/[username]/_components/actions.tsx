@@ -19,7 +19,7 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
     startTransition(() => {
       onFollow(userId)
         .then((data) =>
-          toast.success(`You are now following ${data.following.username}.`)
+          toast.success(`You are now following ${data.following.username}.`),
         )
         .catch(() => toast.error("Something went wrong."));
     });
@@ -29,7 +29,7 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
     startTransition(() => {
       onUnfollow(userId)
         .then((data) =>
-          toast.success(`You unfollowed ${data.following.username}.`)
+          toast.success(`You unfollowed ${data.following.username}.`),
         )
         .catch(() => toast.error("Something went wrong."));
     });
@@ -43,7 +43,7 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
     startTransition(() => {
       onBlock(userId)
         .then((data) =>
-          toast.success(`Blocked the user ${data.blocked.username}`)
+          toast.success(`Blocked the user ${data.blocked.username}`),
         )
         .catch(() => toast.error("Something went wrong."));
     });

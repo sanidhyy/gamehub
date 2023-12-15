@@ -29,7 +29,7 @@ export const NavItem = ({
         }),
         "w-full h-12",
         collapsed ? "justify-center" : "justify-start",
-        isActive && "bg-accent"
+        isActive && "bg-accent",
       )}
     >
       <div className="flex items-center gap-x-4">

@@ -15,7 +15,7 @@ export const Actions = () => {
           buttonVariants({
             size: "sm",
             variant: "ghost",
-          })
+          }),
         )}
       >
         <LogOut className="h-5 w-5 mr-2" />

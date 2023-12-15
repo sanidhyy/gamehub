@@ -40,7 +40,7 @@ export const CommunityItem = ({
     <div
       className={cn(
         "group flex items-center justify-between w-full p-2 rounded-md text-sm hover:bg-white/5",
-        isPending && "opacity-50 pointer-events-none"
+        isPending && "opacity-50 pointer-events-none",
       )}
     >
       <p style={{ color }}>{participantName}</p>

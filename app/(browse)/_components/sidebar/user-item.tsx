@@ -33,13 +33,13 @@ export const UserItem = ({ username, imageUrl, isLive }: UserItemProps) => {
         }),
         "w-full h-12",
         collapsed ? "justify-center" : "justify-start",
-        isActive && "bg-accent"
+        isActive && "bg-accent",
       )}
     >
       <div
         className={cn(
           "flex items-center w-full gap-x-4",
-          collapsed && "justify-center"
+          collapsed && "justify-center",
         )}
       >
         <UserAvatar imageUrl={imageUrl} username={username} isLive={isLive} />
