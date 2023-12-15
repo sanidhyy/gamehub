@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SignInButton, UserButton, currentUser } from "@clerk/nextjs";
-import { Clapperboard } from "lucide-react";
+import { Clapperboard, Github } from "lucide-react";
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -17,6 +17,22 @@ export const Actions = async () => {
           </Button>
         </SignInButton>
       )}
+
+      <Link
+        href="https://github.com/sanidhyy/gamehub"
+        className={cn(
+          "text-muted-foreground hover:text-primary",
+          buttonVariants({
+            size: "sm",
+            variant: "ghost",
+          })
+        )}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Github className="h-5 w-5 lg:mr-2" />
+        <span className="hidden lg:block">GitHub</span>
+      </Link>
 
       {!!user && (
         <div className="flex items-center gap-x-4">
