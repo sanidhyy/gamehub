@@ -1,8 +1,11 @@
 "use client";
 
 import { type ElementRef, useRef, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
+import { UploadDropzone } from "@/lib/uploadthing";
+import { updateStream } from "@/actions/stream";
 import {
   Dialog,
   DialogClose,
@@ -14,7 +17,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { updateStream } from "@/actions/stream";
 
 type InfoModalProps = {
   initialName: string;
@@ -25,9 +27,11 @@ export const InfoModal = ({
   initialName,
   initialThumbnailUrl,
 }: InfoModalProps) => {
+  const router = useRouter();
   const closeRef = useRef<ElementRef<"button">>(null);
   const [isPending, startTransition] = useTransition();
   const [name, setName] = useState(initialName);
+  const [thumbnailUrl, setThumbnailUrl] = useState(initialThumbnailUrl);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -59,14 +63,36 @@ export const InfoModal = ({
 
         <form onSubmit={onSubmit} className="space-y-14">
           <div className="space-y-2">
-            <Label>Name</Label>
+            <Label htmlFor="name">Name</Label>
             <Input
+              id="name"
               placeholder="Stream name"
               onChange={onChange}
               value={name}
               disabled={isPending}
               aria-disabled={isPending}
             />
+          </div>
+
+          <div className="space-y-2">
+            <Label>Thumbnail</Label>
+            <div className="rounded-xl border outline-dashed outline-muted">
+              <UploadDropzone
+                endpoint="thumbnailUploader"
+                appearance={{
+                  label: {
+                    color: "#FFFFFF",
+                  },
+                  allowedContent: {
+                    color: "#FFFFFF",
+                  },
+                }}
+                onClientUploadComplete={(res) => {
+                  setThumbnailUrl(res?.[0]?.url);
+                  router.refresh();
+                }}
+              />
+            </div>
           </div>
 
           <div className="flex justify-between">
