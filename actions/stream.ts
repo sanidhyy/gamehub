@@ -40,7 +40,6 @@ export const updateStream = async (values: Partial<Stream>) => {
 
     return stream;
   } catch (error: unknown) {
-    console.error(error);
     throw new Error("Internal Server Error");
   }
 };
