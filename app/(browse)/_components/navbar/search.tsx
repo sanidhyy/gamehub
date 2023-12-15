@@ -38,7 +38,7 @@ export const Search = () => {
       className="relative w-full lg:w-[400px] flex items-center"
     >
       <Input
-        type="text"
+        type="search"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search..."
