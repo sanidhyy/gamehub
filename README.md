@@ -321,6 +321,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and dependencies that are used in GameHub.
 
+- Thanks to CodeWithAntonio: https://codewithantonio.com/
 - [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.27.6
 - [@clerk/themes](https://www.npmjs.com/package/@clerk/themes): ^1.7.9
 - [@livekit/components-react](https://www.npmjs.com/package/@livekit/components-react): ^1.5.0
