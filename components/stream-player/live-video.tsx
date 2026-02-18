@@ -52,7 +52,9 @@ export const LiveVideo = ({ participant }: LiveVideoProps) => {
     setIsFullscreen(isCurrentlyFullscreen);
   };
 
-  useEventListener("fullscreenchange", handleFullscreenChange, wrapperRef);
+  useEventListener("fullscreenchange", handleFullscreenChange, {
+    current: document,
+  });
 
   useTracks([Track.Source.Camera, Track.Source.Microphone])
     .filter((track) => track.participant.identity === participant.identity)
