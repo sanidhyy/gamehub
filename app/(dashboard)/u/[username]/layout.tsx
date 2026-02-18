@@ -6,14 +6,15 @@ import { Sidebar } from "./_components/sidebar";
 import { Navbar } from "./_components/navbar";
 
 type CreatorLayoutProps = {
-  params: {
+  params: Promise<{
     username: string;
-  };
+  }>;
   children: React.ReactNode;
 };
 
 const CreatorLayout = async ({ children, params }: CreatorLayoutProps) => {
-  const self = await getSelfByUsername(params.username);
+  const { username } = await params;
+  const self = await getSelfByUsername(username);
 
   if (!self) redirect("/");
 
