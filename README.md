@@ -44,38 +44,20 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 gamehub/
+  |- actions/
+    |-- block.ts
+    |-- follow.ts
+    |-- ingress.ts
+    |-- stream.ts
+    |-- token.ts
+    |-- user.ts
   |- app/
     |-- (auth)/
-        |--- _components/
-        |--- sign-in/[[...sign-in]]/
-        |--- sign-up/[[...sign-up]]/
-        |--- layout.tsx
-    |-- (browser)/
-        |--- _components/
-        |--- (home)/
-        |--- [username]/
-        |--- search/
-        |--- layout.tsx
-    |-- (dashboard)/u/[username]/
-        |--- _components/
-        |--- (home)/
-        |--- chat/
-        |--- community/
-        |--- keys/
-        |--- layout.tsx
+    |-- (browse)/
+    |-- (dashboard)/
     |-- api/
-        |--- uploadthing/
-          |---- core.ts
-          |---- route.ts
-        |--- webhooks/
-          |---- clerk/
-            |----- route.ts
-          |---- livekit/
-            |----- route.ts
-        |--- page.tsx
     |-- error.tsx
     |-- favicon.ico
     |-- globals.css
@@ -109,25 +91,24 @@ gamehub/
   |- prisma/
     |-- schema.prisma
   |- public/
-    |-- logo.svg
   |- store/
-    |-- use-chat-sidebar.tsx
-    |-- use-creator-sidebar.tsx
-    |-- use-sidebar.tsx
-  |- .env
+    |-- use-chat-sidebar.ts
+    |-- use-creator-sidebar.ts
+    |-- use-sidebar.ts
   |- .env.example
+  |- .env/.env.local
   |- .eslintrc.json
   |- .gitignore
+  |- bun.lock
   |- components.json
   |- middleware.ts
   |- next.config.js
-  |- package-lock.json
   |- package.json
   |- postcss.config.js
   |- tailwind.config.ts
   |- tsconfig.json
+  |- vercel.ts
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -275,62 +256,55 @@ Useful resources and dependencies that are used in GameHub.
 
 - Thanks to CodeWithAntonio: https://codewithantonio.com/
 <!--- DEPENDENCIES_START --->
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.27.6
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.31.5
 - [@clerk/themes](https://www.npmjs.com/package/@clerk/themes): ^1.7.9
 - [@livekit/components-react](https://www.npmjs.com/package/@livekit/components-react): ^1.5.0
 - [@prisma/client](https://www.npmjs.com/package/@prisma/client): ^5.7.0
-- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.0.4
-- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.0.5
-- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.0.2
-- [@radix-ui/react-scroll-area](https://www.npmjs.com/package/@radix-ui/react-scroll-area): ^1.0.5
-- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.0.0
-- [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.0.3
-- [@radix-ui/react-slider](https://www.npmjs.com/package/@radix-ui/react-slider): ^1.1.2
-- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.0.2
-- [@radix-ui/react-switch](https://www.npmjs.com/package/@radix-ui/react-switch): ^1.0.3
-- [@radix-ui/react-tooltip](https://www.npmjs.com/package/@radix-ui/react-tooltip): ^1.0.7
-- [@tanstack/react-table](https://www.npmjs.com/package/@tanstack/react-table): ^8.10.7
+- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.11
+- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.1.15
+- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.8
+- [@radix-ui/react-scroll-area](https://www.npmjs.com/package/@radix-ui/react-scroll-area): ^1.2.10
+- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.2.6
+- [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.1.8
+- [@radix-ui/react-slider](https://www.npmjs.com/package/@radix-ui/react-slider): ^1.3.6
+- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
+- [@radix-ui/react-switch](https://www.npmjs.com/package/@radix-ui/react-switch): ^1.2.6
+- [@radix-ui/react-tooltip](https://www.npmjs.com/package/@radix-ui/react-tooltip): ^1.2.8
+- [@tanstack/react-table](https://www.npmjs.com/package/@tanstack/react-table): ^8.21.3
+- [@types/node](https://www.npmjs.com/package/@types/node): ^25.2.3
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
+- [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^11.0.0
 - [@uploadthing/react](https://www.npmjs.com/package/@uploadthing/react): ^6.0.2
-- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.0
-- [clsx](https://www.npmjs.com/package/clsx): ^2.0.0
-- [date-fns](https://www.npmjs.com/package/date-fns): ^2.30.0
+- [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.0.33
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.24
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
+- [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
+- [date-fns](https://www.npmjs.com/package/date-fns): ^4.1.0
+- [eslint](https://www.npmjs.com/package/eslint): ^8
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
 - [jwt-decode](https://www.npmjs.com/package/jwt-decode): ^4.0.0
 - [livekit-client](https://www.npmjs.com/package/livekit-client): ^1.15.4
 - [livekit-server-sdk](https://www.npmjs.com/package/livekit-server-sdk): ^1.2.7
-- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.294.0
-- [next](https://www.npmjs.com/package/next): 14.0.4
-- [next-themes](https://www.npmjs.com/package/next-themes): ^0.2.1
-- [query-string](https://www.npmjs.com/package/query-string): ^8.1.0
-- [react](https://www.npmjs.com/package/react): ^18
-- [react-dom](https://www.npmjs.com/package/react-dom): ^18
-- [sonner](https://www.npmjs.com/package/sonner): ^1.2.4
-- [svix](https://www.npmjs.com/package/svix): ^1.15.0
+- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.574.0
+- [next](https://www.npmjs.com/package/next): 15.5.10
+- [next-themes](https://www.npmjs.com/package/next-themes): ^0.4.6
+- [postcss](https://www.npmjs.com/package/postcss): ^8
+- [prisma](https://www.npmjs.com/package/prisma): ^5.7.0
+- [query-string](https://www.npmjs.com/package/query-string): ^9.3.1
+- [react](https://www.npmjs.com/package/react): ^19.2.4
+- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.4
+- [sonner](https://www.npmjs.com/package/sonner): ^2.0.7
+- [svix](https://www.npmjs.com/package/svix): ^1.85.0
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.1.0
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
+- [typescript](https://www.npmjs.com/package/typescript): ^5.9.3
 - [uploadthing](https://www.npmjs.com/package/uploadthing): ^6.1.0
-- [usehooks-ts](https://www.npmjs.com/package/usehooks-ts): ^2.9.1
-- [uuid](https://www.npmjs.com/package/uuid): ^9.0.1
-- [zustand](https://www.npmjs.com/package/zustand): ^4.4.7
-- [@types/node](https://www.npmjs.com/package/@types/node): ^20
-- [@types/react](https://www.npmjs.com/package/@types/react): ^18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.0.1
-- [eslint](https://www.npmjs.com/package/eslint): ^8
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
-- [postcss](https://www.npmjs.com/package/postcss): ^8
-- [prisma](https://www.npmjs.com/package/prisma): ^5.7.0
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
-- [typescript](https://www.npmjs.com/package/typescript): ^5
-- [@types/node](https://www.npmjs.com/package/@types/node): ^20
-- [@types/react](https://www.npmjs.com/package/@types/react): ^18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.0.1
-- [eslint](https://www.npmjs.com/package/eslint): ^8
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
-- [postcss](https://www.npmjs.com/package/postcss): ^8
-- [prisma](https://www.npmjs.com/package/prisma): ^5.7.0
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
-- [typescript](https://www.npmjs.com/package/typescript): ^5
+- [usehooks-ts](https://www.npmjs.com/package/usehooks-ts): ^3.1.1
+- [uuid](https://www.npmjs.com/package/uuid): ^13.0.0
+- [zustand](https://www.npmjs.com/package/zustand): ^5.0.11
+
 <!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
