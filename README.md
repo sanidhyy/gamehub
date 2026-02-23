@@ -43,6 +43,8 @@
 
 Here is the folder structure of this app.
 
+<!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 gamehub/
   |- app/
@@ -126,6 +128,8 @@ gamehub/
   |- tsconfig.json
 ```
 
+<!--- FOLDER_STRUCTURE_END --->
+
 <br />
 
 ## :toolbox: Getting Started
@@ -190,21 +194,15 @@ DATABASE_URL="mysql://127.0.0.1/gamehub?ssl-mode=REQUIRED"
 To obtain Livekit keys, follow these steps:
 
 1. **Sign up for a Livekit account:**
-
-
-    - Visit [Livekit Signup](https://livekit.io/signup) to create an account.
+   - Visit [Livekit Signup](https://livekit.io/signup) to create an account.
 
 2. **Create a new project:**
-
-
-    - Log in to your Livekit account.
-    - Go to the dashboard and create a new project.
+   - Log in to your Livekit account.
+   - Go to the dashboard and create a new project.
 
 3. **Get API Key and Secret:**
-
-
-    - Once the project is created, navigate to the project settings.
-    - Find or generate API Key and Secret.
+   - Once the project is created, navigate to the project settings.
+   - Find or generate API Key and Secret.
 
 ```env
 LIVEKIT_API_KEY=XXXXXXXXXXXXXXXXXXXX
@@ -229,20 +227,14 @@ NEXT_PUBLIC_BASE_URL=http://localhost:3000
 To obtain Uploadthing keys, follow these steps:
 
 1. **Sign up for an Uploadthing account:**
-
-
-    - Visit [Uploadthing Signup](https://uploadthingy.com/) to create an account.
+   - Visit [Uploadthing Signup](https://uploadthingy.com/) to create an account.
 
 2. **Create a new application:**
-
-
-    - Log in to your Uploadthing account.
-    - Navigate to the dashboard and create a new application.
+   - Log in to your Uploadthing account.
+   - Navigate to the dashboard and create a new application.
 
 3. **Get Secret and App ID:**
-
-
-    - Once the application is created, find or generate the Secret and App ID.
+   - Once the application is created, find or generate the Secret and App ID.
 
 ```env
 UPLOADTHING_SECRET=sk_live_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -252,46 +244,6 @@ UPLOADTHING_APP_ID=XXXXXXXXX
 11. Open terminal in root directory. Run `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
 
 12. Now app is fully configured 👍 and you can start using this app using `npm run dev` or `yarn dev`.
-
-### :books: Additional Resources
-
-- Clerk Documentation: [Clerk Documentation](https://www.clerk.dev/docs/)
-- Stripe Documentation: [Stripe Documentation](https://stripe.com/docs/)
-- Aiven Documentation: [Aiven Documentation](https://docs.aiven.io/)
-- Prisma Documentation: [Prisma Documentation](https://www.prisma.io/docs/)
-- LiveKit Components React Documentation: [LiveKit Components React Documentation](https://docs.livekit.io/)
-- Radix UI Avatar Documentation: [Radix UI Avatar Documentation](https://www.radix-ui.com/docs/avatar)
-- Radix UI Dialog Documentation: [Radix UI Dialog Documentation](https://www.radix-ui.com/docs/dialog)
-- Radix UI Label Documentation: [Radix UI Label Documentation](https://www.radix-ui.com/docs/label)
-- Radix UI Scroll Area Documentation: [Radix UI Scroll Area Documentation](https://www.radix-ui.com/docs/scroll-area)
-- Radix UI Select Documentation: [Radix UI Select Documentation](https://www.radix-ui.com/docs/select)
-- Radix UI Separator Documentation: [Radix UI Separator Documentation](https://www.radix-ui.com/docs/separator)
-- Radix UI Slider Documentation: [Radix UI Slider Documentation](https://www.radix-ui.com/docs/slider)
-- Radix UI Slot Documentation: [Radix UI Slot Documentation](https://www.radix-ui.com/docs/slot)
-- Radix UI Switch Documentation: [Radix UI Switch Documentation](https://www.radix-ui.com/docs/switch)
-- Radix UI Tooltip Documentation: [Radix UI Tooltip Documentation](https://www.radix-ui.com/docs/tooltip)
-- Tanstack React Table Documentation: [Tanstack React Table Documentation](https://www.npmjs.com/package/@tanstack/react-table)
-- UploadThing React Documentation: [UploadThing React Documentation](https://your-uploadthing-react-docs-link.com/)
-- Class Variance Authority Documentation: [Class Variance Authority Documentation](https://www.npmjs.com/package/class-variance-authority)
-- clsx Documentation: [clsx Documentation](https://www.npmjs.com/package/clsx)
-- date-fns Documentation: [date-fns Documentation](https://date-fns.org/docs/)
-- jwt-decode Documentation: [jwt-decode Documentation](https://www.npmjs.com/package/jwt-decode)
-- LiveKit Client Documentation: [LiveKit Client Documentation](https://your-livekit-client-docs-link.com/)
-- LiveKit Server SDK Documentation: [LiveKit Server SDK Documentation](https://your-livekit-server-sdk-docs-link.com/)
-- Lucide React Documentation: [Lucide React Documentation](https://www.npmjs.com/package/lucide-react)
-- Next.js Documentation: [Next.js Documentation](https://nextjs.org/docs/getting-started)
-- Next Themes Documentation: [Next Themes Documentation](https://github.com/pacocoursey/next-themes)
-- query-string Documentation: [query-string Documentation](https://www.npmjs.com/package/query-string)
-- React Documentation: [React Documentation](https://reactjs.org/docs/getting-started.html)
-- React DOM Documentation: [React DOM Documentation](https://reactjs.org/docs/react-dom.html)
-- Sonner Documentation: [Sonner Documentation](https://www.npmjs.com/package/sonner)
-- SVIX Documentation: [SVIX Documentation](https://docs.svix.com/)
-- Tailwind Merge Documentation: [Tailwind Merge Documentation](https://www.npmjs.com/package/tailwind-merge)
-- Tailwind CSS Animate Documentation: [Tailwind CSS Animate Documentation](https://www.npmjs.com/package/tailwindcss-animate)
-- UploadThing Documentation: [UploadThing Documentation](https://your-uploadthing-docs-link.com/)
-- useHooks-ts Documentation: [useHooks-ts Documentation](https://usehooks-ts.com/)
-- UUID Documentation: [UUID Documentation](https://www.npmjs.com/package/uuid)
-- Zustand Documentation: [Zustand Documentation](https://zustand.surge.sh/)
 
 **NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
 
@@ -322,6 +274,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in GameHub.
 
 - Thanks to CodeWithAntonio: https://codewithantonio.com/
+<!--- DEPENDENCIES_START --->
 - [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.27.6
 - [@clerk/themes](https://www.npmjs.com/package/@clerk/themes): ^1.7.9
 - [@livekit/components-react](https://www.npmjs.com/package/@livekit/components-react): ^1.5.0
@@ -378,6 +331,7 @@ Useful resources and dependencies that are used in GameHub.
 - [prisma](https://www.npmjs.com/package/prisma): ^5.7.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
 - [typescript](https://www.npmjs.com/package/typescript): ^5
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
