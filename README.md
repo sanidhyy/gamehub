@@ -244,7 +244,7 @@ UPLOADTHING_APP_ID=XXXXXXXXX
 
 ## :wrench: Stats
 
-[![Stats for GameHub](/.github/images/stats.svg "Stats for GameHub")](https://pagespeed-insights-svg.glitch.me/?url=https://twitch-gamehub.vercel.app/ "Stats for GameHub")
+[![Stats for GameHub](/.github/images/stats.svg "Stats for GameHub")](https://pagespeed.web.dev/analysis?url=https://twitch-gamehub.vercel.app/ "Stats for GameHub")
 
 ## :raised_hands: Contribute
 
