@@ -287,7 +287,7 @@ Useful resources and dependencies that are used in GameHub.
 - [livekit-client](https://www.npmjs.com/package/livekit-client): ^1.15.4
 - [livekit-server-sdk](https://www.npmjs.com/package/livekit-server-sdk): ^1.2.7
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.574.0
-- [next](https://www.npmjs.com/package/next): 15.5.18
+- [next](https://www.npmjs.com/package/next): 15.5.21
 - [next-themes](https://www.npmjs.com/package/next-themes): ^0.4.6
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [prisma](https://www.npmjs.com/package/prisma): ^5.7.0
