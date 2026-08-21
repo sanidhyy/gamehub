@@ -11,7 +11,7 @@
   },
   "author": {
     "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
+    "email": "sanidhyyy@gmail.com",
     "url": "https://github.com/sanidhyy"
   },
   "description": "A modern ui/ux Twitch clone using Next.js 14.",
@@ -58,7 +58,7 @@
   "homepage": "https://github.com/sanidhyy/gamehub#readme",
   "bugs": {
     "url": "https://github.com/sanidhyy/gamehub/issues",
-    "email": "sanidhya.verma12345@gmail.com"
+    "email": "sanidhyyy@gmail.com"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.31.5",
