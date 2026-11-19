@@ -289,7 +289,7 @@ Useful resources and dependencies that are used in GameHub.
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [date-fns](https://www.npmjs.com/package/date-fns): ^4.1.0
-- [eslint](https://www.npmjs.com/package/eslint): ^8
+- [eslint](https://www.npmjs.com/package/eslint): ^10
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
 - [jwt-decode](https://www.npmjs.com/package/jwt-decode): ^4.0.0
 - [livekit-client](https://www.npmjs.com/package/livekit-client): ^1.15.4
